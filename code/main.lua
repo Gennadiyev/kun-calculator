@@ -98,6 +98,7 @@ calc.onClick=function(calculate)
 	if achievementCounter == 1 then
 		print("ERROR: DIVIDED BY 0")
 		print("隐藏成就计数器："..tostring(found).."/7。")
+		achievementCounter = 0
 	end
 	--1
 	if notChanging == 1 then
