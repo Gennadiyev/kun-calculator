@@ -13,7 +13,6 @@ developer="Kunologist" -- Why not add your name here? Use semicolons and spaces 
 description="A Simple calculator if you believe." -- I do not believe.
 debugmode=true -- Do not modify.
 user_permission={
-  "WRITE_EXTERNAL_STORAGE",
-  "WRITE_SETTINGS"
+  
 }
 -- I want to require no permission actually.
