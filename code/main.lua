@@ -32,7 +32,7 @@ calc.onClick=function(calculate)
 		adder1.text="YESH!"
 		运算符.text="It's 42!"
 		ultimate=0
-    else
+	else
 		if modechange < 20 then modechange = 0 end
 		if mode==0 then
 			result.text=tostring(tonumber(adder1.text)+tonumber(adder2.text))
@@ -107,8 +107,8 @@ test.onClick=function(test)
 			hint="输入自定义程序名";
 			layout_marginTop="7dp";
 			layout_width="77%w";
-		layout_gravity="center",
-		id="appname";
+			layout_gravity="center",
+			id="appname";
 		};
 	};
 
