@@ -183,7 +183,7 @@ config.onClick=function(changeMode)
 		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		hittingModes = -1
 		fortyTwo = fortyTwo + 1
-		result.text = "Answer to the Ultimate Question\nof Life\nthe Universe\nand Everything"
+		result.text = "Answer to the Ultimate Question\nof Life\nthe Universe\nand Everything."
 	end
 
 	--coming soon!
