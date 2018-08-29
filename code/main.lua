@@ -183,6 +183,7 @@ config.onClick=function(changeMode)
 		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		hittingModes = -1
 		fortyTwo = fortyTwo + 1
+		result.text = "Answer to the Ultimate Question\nof Life\nthe Universe\nand Everything"
 	end
 
 	--coming soon!
@@ -251,10 +252,10 @@ test.onClick=function(test)
 		--coming soon!
 
 		--end
-		if appname.text=="Kunologist" and found == ACHIEVEMENT_SUM - 1 then
+		if appname.text=="Kunologist" and found > ACHIEVEMENT_SUM - 1.5 then
 			theEnd = 1
 		end
-		if appname.text=="Kunologist" and found ~= ACHIEVEMENT_SUM - 1 then
+		if appname.text=="Kunologist" and found < ACHIEVEMENT_SUM - 1 then
 			theEnd = -1
 		end
 
@@ -262,8 +263,9 @@ test.onClick=function(test)
 
 		--5
 		if kunIsBack == 1 then
-			found = found + 1
+			found = found + 0.5
 			print("鲲又回来了")
+			print("不过这个提示也太明显了吧。。给你半个！不服憋着。")
 			print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 			kunIsBack = -1
 		end
