@@ -20,7 +20,7 @@
             TextView;
             gravity="center";
             textSize="24";
-            text="我需要一个乘法，计算结果为340。";
+            text="我需要一个乘法，计算结果为960。";
             layout_width="fill";
             };
         {
