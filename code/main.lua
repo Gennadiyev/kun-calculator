@@ -9,7 +9,7 @@ activity.setTheme(android.R.style.Theme_Material_Light)
 activity.setContentView(loadlayout("layout"))
 
 WHAT_KUN_WANTS = 340
-ACHIEVEMENT_SUM = 7
+ACHIEVEMENT_SUM = 8
 
 found = 0
 mode = 0
@@ -118,9 +118,9 @@ calc.onClick=function(calculate)
 		fortyTwo = -1
 	end
 	--6
-	if calcAndCalc == 50 then
-		print("这是您第50次计算。那么，象征性给您成就半个！")
-		found=found+0.5
+	if calcAndCalc == 40 then
+		print("这是您的第40次计算。那么，作为奖励————")
+		found=found+1
 		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		calcAndCalc = -1 
 	end
@@ -179,7 +179,7 @@ config.onClick=function(changeMode)
 	if hittingModes == 20 then
 		found=found+1
 		print("你是真的很无聊诶。")
-		print("。。。不过不无聊的人怎么会玩计算器呢")
+		print("……不过不无聊的人怎么会玩计算器呢")
 		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		hittingModes = -1
 		fortyTwo = fortyTwo + 1
@@ -263,9 +263,9 @@ test.onClick=function(test)
 
 		--5
 		if kunIsBack == 1 then
-			found = found + 0.5
-			print("鲲又回来了")
-			print("不过这个提示也太明显了吧。。给你半个！不服憋着。")
+			found = found + 1
+			print("鲲又回来了！")
+			print("不过这个提示也太明显了吧……算了，勉强给您一个。")
 			print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 			kunIsBack = -1
 		end
@@ -286,7 +286,7 @@ test.onClick=function(test)
 		end
 
 		--easter eggs
-		if appname.text=="鲲的英文名" or appname.text == "鲲的英语名" then print("喔，你以为这样就能蒙混过关？好的。不给过！哼。") end
+		if appname.text=="鲲的英文名" or appname.text == "鲲的英语名" or appname.text == "鲲的英语名试试？" or appname.text == "鲲的英语名试试" then print("喔，你以为这样就能蒙混过关？好的。不给过！哼。") end
 		if string.sub(appname.text,1,3)=="Kun" and appname.text~="Kunologist" then
 			print("Uh oh, wrnog speling! Try agian?") 
 		end --My ideas! From Richardn
@@ -297,7 +297,7 @@ test.onClick=function(test)
 	end})
 
 	.setNegativeButton("取消",{onClick=function(u)
-		--the main part,because...wait,what?
+		--the main part,because... wait,what?
 
 
 		--Ifs
@@ -315,7 +315,7 @@ test.onClick=function(test)
 		--Thens
 		--4
 		if cancelling > -1 and cancelling < 5 then
-			print("哇！居然点了取消！真没想到啊！那我就陪你玩玩好了！把程序名字设定为鲲的英语名试试"..string.rep("? ",cancelling))
+			print("哇！居然点了取消！真没想到啊！那……把程序名字设定为鲲的英语名试试"..string.rep("? ",cancelling))
 		end
 		if cancelling == 5 then
 			found = found + 1
