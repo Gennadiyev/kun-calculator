@@ -1,8 +1,8 @@
 {
     LinearLayout;
+    layout_width="100sp";
     layout_height="fill";
     orientation="vertical";
-    layout_width="100sp";
     {
         EditText;
         text="20";
@@ -11,53 +11,63 @@
         };
     {
         TextView;
-        textSize="30";
         text="+";
         id="运算符";
+        textSize="30";
         };
     {
         EditText;
-        textSize="20";
-        id="adder2";
         text="10";
+        id="adder2";
         layout_width="100sp";
+        textSize="20";
         };
     {
         TextView;
-        textSize="30";
         text="=";
+        textSize="30";
         };
     {
         TextView;
-        textSize="24";
-        id="result";
         text="?";
+        id="result";
         layout_width="wrap";
+        textSize="24";
         };
     {
         Button;
-        id="calc";
         text="计算";
+        id="calc";
         };
     {
         Button;
         layout_marginTop="-144";
-        text="切换模式";
         id="config";
         layout_marginLeft="300";
+        text="切换模式";
         };
     {
         Switch;
-        layout_marginTop="20sp";
+        layout_marginTop="10";
         id="error_catch";
-        textSize="24";
         text="Error Catching:";
+        textSize="24";
         };
     {
         Button;
         text="设置程序标题";
         id="test";
+        layout_marginTop="10";
         layout_width="wrap_content";
+        };
+    {
+        TextView;
+        id="printer";
+        layout_height="fill";
+        textSize="20";
+        layout_width="fill";
+        text=[==[欢迎打开鲲的计算！
+        本计算器每次退出均会完全重置喔！]==];
+        textColor="#99dd99";
+        };
     };
-};
-
