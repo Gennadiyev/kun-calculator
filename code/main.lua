@@ -8,7 +8,7 @@ activity.setTitle('鲲')
 activity.setTheme(android.R.style.Theme_Material_Light)
 activity.setContentView(loadlayout("layout"))
 
-WHAT_KUN_WANTS = 340
+WHAT_KUN_WANTS = 960
 ACHIEVEMENT_SUM = 8
 
 found = 0
