@@ -105,13 +105,13 @@ calc.onClick=function(calculate)
 		print("您就不能换一个数据嘛！我生气了！我要把答案搞成错误的！")
 		result.text=tostring(WHAT_KUN_WANTS)
 		found = found + 1
-		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		notChanging = -1
 	end
 	--3
 	if fortyTwo == 2 then
 		found = found + 1
-		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		adder1.text="SIX"
 		运算符.text="MULTIPLIED BY"
 		adder2.text="NINE"
@@ -121,7 +121,7 @@ calc.onClick=function(calculate)
 	if calcAndCalc == 50 then
 		print("这是您第50次计算。那么，象征性给您成就半个！")
 		found=found+0.5
-		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		calcAndCalc = -1 
 	end
 	--7
@@ -136,7 +136,7 @@ calc.onClick=function(calculate)
 	if knowingWhatKunWants == 20 then
 		found=found+1
 		print("好的，好的。你赢了。不就是成就嘛。给你加一个。")
-		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		knowingWhatKunWants = -1
 	end
 
@@ -179,7 +179,8 @@ config.onClick=function(changeMode)
 	if hittingModes == 20 then
 		found=found+1
 		print("你是真的很无聊诶。")
-		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		print("。。。不过不无聊的人怎么会玩计算器呢")
+		print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		hittingModes = -1
 		fortyTwo = fortyTwo + 1
 	end
@@ -263,7 +264,7 @@ test.onClick=function(test)
 		if kunIsBack == 1 then
 			found = found + 1
 			print("鲲又回来了")
-			print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+			print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 			kunIsBack = -1
 		end
 		--coming soon!
@@ -316,7 +317,7 @@ test.onClick=function(test)
 		end
 		if cancelling == 5 then
 			found = found + 1
-			print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+			print("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 			cancelling = -1
 		end
 
