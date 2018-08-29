@@ -1,0 +1,16 @@
+{
+    LinearLayout;
+    orientation="vertical";
+    layout_width="fill";
+    layout_height="fill";
+    {
+        TextView;
+        textSize="30sp";
+        text="您击败了鲲。";
+        layout_gravity="center";
+        layout_width="fill";
+        textColor="5576339999";
+        gravity="center";
+        layout_height="fill";
+        };
+    };
