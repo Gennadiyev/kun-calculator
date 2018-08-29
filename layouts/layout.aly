@@ -68,7 +68,7 @@
             TextView;
             layout_width="fill";
             id="printer";
-            textSize="20";
+            textSize="18";
             text=[==[欢迎打开鲲的计算！
 本计算器每次退出均会完全重置喔！]==];
             layout_height="fill";
