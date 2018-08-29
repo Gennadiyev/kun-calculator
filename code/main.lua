@@ -129,7 +129,7 @@ calc.onClick=function(calculate)
 	end
 	--6
 	if calcAndCalc == 40 then
-		printMsg("这是您的第40次计算。那么，作为奖励————")
+		printMsg("这是您的第40次计算。那么，作为奖励——")
 		found=found+1
 		printMsg("隐藏成就达成："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		calcAndCalc = -1 
