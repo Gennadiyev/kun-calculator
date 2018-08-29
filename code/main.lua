@@ -45,11 +45,11 @@ calc.onClick=function(calculate)
 	--Ifs
 
 	--0
-	if achievementCounter == 0 and mode == 3 and adder2.text == "0" and error_catch.checked then
+	if mode == 3 and adder2.text == "0" and error_catch.checked then
 		achievementCounter = achievementCounter + 1
 	end
 	--1
-	if notChanging == 0 and mode == 0 and adder1.text == "20" and adder2.text == "10" then
+	if notChanging > -1 and mode == 0 and adder1.text == "20" and adder2.text == "10" then
 		notChanging = notChanging + 1
 	end
 	--2
@@ -57,16 +57,16 @@ calc.onClick=function(calculate)
 		hittingModes = 0
 	end
 	--3
-	if fortyTwo == 1 and mode == 0 and tonumber(adder1.text)+tonumber(adder2.text) == 42 then
+	if fortyTwo > 0 and mode == 0 and tonumber(adder1.text)+tonumber(adder2.text) == 42 then
 		fortyTwo = fortyTwo + 1
 	end
-	if fortyTwo == 1 and mode == 1 and tonumber(adder1.text)-tonumber(adder2.text) == 42 then
+	if fortyTwo > 0 and mode == 1 and tonumber(adder1.text)-tonumber(adder2.text) == 42 then
 		fortyTwo = fortyTwo + 1
 	end
-	if fortyTwo == 1 and mode == 2 and tonumber(adder1.text)*tonumber(adder2.text) == 42 then
+	if fortyTwo > 0 and mode == 2 and tonumber(adder1.text)*tonumber(adder2.text) == 42 then
 		fortyTwo = fortyTwo + 1
 	end
-	if fortyTwo == 1 and mode == 3 and tonumber(adder1.text)/tonumber(adder2.text) == 42 then
+	if fortyTwo > 0 and mode == 3 and tonumber(adder1.text)/tonumber(adder2.text) == 42 then
 		fortyTwo = fortyTwo + 1
 	end
 	--4
@@ -74,20 +74,20 @@ calc.onClick=function(calculate)
 		cancelling = 0
 	end
 	--6
-	if calcAndCalc < 50 then 
+	if calcAndCalc > -1 and calcAndCalc < 50 then 
 		calcAndCalc = calcAndCalc + 1
 	end
 	--7
-	if knowingWhatKunWants == 0 and mode == 0 and tonumber(adder1.text)+tonumber(adder2.text) == WHAT_KUN_WANTS then
+	if knowingWhatKunWants > -1 and mode == 0 and tonumber(adder1.text)+tonumber(adder2.text) == WHAT_KUN_WANTS then
 		knowingWhatKunWants = knowingWhatKunWants + 1
 	end
-	if knowingWhatKunWants == 0 and mode == 1 and tonumber(adder1.text)-tonumber(adder2.text) == WHAT_KUN_WANTS then
+	if knowingWhatKunWants > -1 and mode == 1 and tonumber(adder1.text)-tonumber(adder2.text) == WHAT_KUN_WANTS then
 		knowingWhatKunWants = knowingWhatKunWants + 1
 	end
-	if knowingWhatKunWants == 0 and mode == 2 and tonumber(adder1.text)*tonumber(adder2.text) == WHAT_KUN_WANTS then
+	if knowingWhatKunWants > -1 and mode == 2 and tonumber(adder1.text)*tonumber(adder2.text) == WHAT_KUN_WANTS then
 		knowingWhatKunWants = knowingWhatKunWants + 1
 	end
-	if knowingWhatKunWants == 0 and mode == 3 and tonumber(adder1.text)/tonumber(adder2.text) == WHAT_KUN_WANTS then
+	if knowingWhatKunWants > -1 and mode == 3 and tonumber(adder1.text)/tonumber(adder2.text) == WHAT_KUN_WANTS then
 		knowingWhatKunWants = knowingWhatKunWants + 1
 	end
 
@@ -95,49 +95,49 @@ calc.onClick=function(calculate)
 	--Thens
 
 	--0
-	if achievementCounter == 1 then
+	if achievementCounter > 0 then
 		print("ERROR: DIVIDED BY 0")
-		print("隐藏成就计数器："..tostring(found).."/7。")
+		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		achievementCounter = 0
 	end
 	--1
 	if notChanging == 1 then
 		print("您就不能换一个数据嘛！我生气了！我要把答案搞成错误的！")
-		result.text="340"
+		result.text=tostring(WHAT_KUN_WANTS)
 		found = found + 1
-		print("隐藏成就达成："..tostring(found).."/7")
-		notChanging = notChanging + 1
+		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		notChanging = -1
 	end
 	--3
 	if fortyTwo == 2 then
 		found = found + 1
-		print("隐藏成就达成："..tostring(found).."/7")
+		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
 		adder1.text="SIX"
 		运算符.text="MULTIPLIED BY"
 		adder2.text="NINE"
-		fortyTwo = fortyTwo + 1
+		fortyTwo = -1
 	end
 	--6
 	if calcAndCalc == 50 then
 		print("这是您第50次计算。那么，象征性给您成就半个！")
 		found=found+0.5
-		print("隐藏成就达成："..tostring(found).."/7")
-		calcAndCalc = calcAndCalc + 1 
+		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		calcAndCalc = -1 
 	end
 	--7
 	if knowingWhatKunWants > 0 and knowingWhatKunWants < 11 then
 		print("说，您调戏这个计算器多久了？那么熟练？")
 		knowingWhatKunWants = knowingWhatKunWants + 1
 	end
-	if knowingWhatKunWants > 10 then
-		print("不给不给不给"..string.rep("！",knowingWhatKunWants))
+	if knowingWhatKunWants > 10 and knowingWhatKunWants < 20 then
+		print("不给不给不给"..string.rep("！",knowingWhatKunWants-10))
 		knowingWhatKunWants = knowingWhatKunWants + 1
 	end
 	if knowingWhatKunWants == 20 then
 		found=found+1
 		print("好的，好的。你赢了。不就是成就嘛。给你加一个。")
-		print("隐藏成就达成："..tostring(found).."/7")
-		knowingWhatKunWants = knowingWhatKunWants +1
+		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		knowingWhatKunWants = -1
 	end
 
 	--coming soon!
@@ -162,12 +162,8 @@ config.onClick=function(changeMode)
 	--Ifs
 
 	--2
-	if hittingModes < 20 then
+	if hittingModes > -1 and hittingModes < 20 then
 		hittingModes = hittingModes + 1
-	end
-	--4
-	if cancelling > 0 then
-		cancelling = 0
 	end
 
 	--coming soon!
@@ -183,8 +179,8 @@ config.onClick=function(changeMode)
 	if hittingModes == 20 then
 		found=found+1
 		print("你是真的很无聊诶。")
-		print("隐藏成就达成："..tostring(found).."/7")
-		hittingModes = hittingModes + 1
+		print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+		hittingModes = -1
 		fortyTwo = fortyTwo + 1
 	end
 
@@ -200,6 +196,27 @@ config.onClick=function(changeMode)
 end
 
 test.onClick=function(test)
+	--Ifs
+
+	--2
+	if hittingModes > 0 then
+		hittingModes = 0
+	end
+
+	--coming soon!
+
+	--end
+
+
+	--Thens
+
+	--coming soon!
+
+	--end
+
+
+	--easter eggs
+
 	--输入对话框
 	InputLayout={
 		LinearLayout;
@@ -234,10 +251,10 @@ test.onClick=function(test)
 
 		--end
 		if appname.text=="Kunologist" and found == ACHIEVEMENT_SUM - 1 then
-			theEnd = theEnd + 1
+			theEnd = 1
 		end
 		if appname.text=="Kunologist" and found ~= ACHIEVEMENT_SUM - 1 then
-			theEnd = theEnd - 1
+			theEnd = -1
 		end
 
 		--Thens
@@ -246,8 +263,8 @@ test.onClick=function(test)
 		if kunIsBack == 1 then
 			found = found + 1
 			print("鲲又回来了")
-			print("隐藏成就达成："..tostring(found).."/7")
-			kunIsBack = kunIsBack + 1
+			print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+			kunIsBack = -1
 		end
 		--coming soon!
 
@@ -268,8 +285,8 @@ test.onClick=function(test)
 		--easter eggs
 		if appname.text=="鲲的英文名" or appname.text == "鲲的英语名" then print("喔，你以为这样就能蒙混过关？好的。不给过！哼。") end
 		if string.sub(appname.text,1,3)=="Kun" and appname.text~="Kunologist" then
-        	print("Uh oh, wrnog speling! Try agian?") 
-        end --My ideas! From Richardn
+			print("Uh oh, wrnog speling! Try agian?") 
+		end --My ideas! From Richardn
 		if string.sub(appname.text,1,3)=="kum" or string.sub(appname.text,1,3)=="kun" or string.sub(appname.text,1,3) == "Kum" then 
 			print("请首字母大写并检查拼写") 
 		end
@@ -283,7 +300,7 @@ test.onClick=function(test)
 		--Ifs
 
 		--4
-		if cancelling < 5 then
+		if  cancelling > -1 and cancelling < 5 then
 			cancelling = cancelling + 1
 		end
 
@@ -294,13 +311,13 @@ test.onClick=function(test)
 
 		--Thens
 		--4
-		if cancelling < 5 then
-			print("哇！居然点了取消！真没想到啊！那我就陪你玩玩好了！把程序名字设定为鲲的英语名试试？")
+		if cancelling > -1 and cancelling < 5 then
+			print("哇！居然点了取消！真没想到啊！那我就陪你玩玩好了！把程序名字设定为鲲的英语名试试"..string.rep("? ",cancelling))
 		end
 		if cancelling == 5 then
 			found = found + 1
-			print("隐藏成就达成："..tostring(found).."/7")
-			cancelling = cancelling + 1
+			print("隐藏成就计数器："..tostring(found).."/"..tostring(ACHIEVEMENT_SUM).."。")
+			cancelling = -1
 		end
 
 		--coming soon!
