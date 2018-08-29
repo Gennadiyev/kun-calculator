@@ -27,13 +27,13 @@ theEnd = 0
 
 function printMsgAdvanced(textToPrint, changeColor, changeSize)
 	-- the text are put before everything else.
-	printer.text = textToPrint..printer.text
+	printer.text = textToPrint.."\n"..printer.text
 	printer.textColor = changeColor
 	printer.textSize = changeSize
 end
 
 function printMsg(textToPrint)
-	printer.text = textToPrint..printer.text
+	printer.text = textToPrint.."\n"..printer.text
 end
 
 calc.onClick=function(calculate)
