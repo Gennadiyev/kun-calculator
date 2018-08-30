@@ -1,26 +1,26 @@
 {
     LinearLayout;
     orientation="vertical";
-    layout_width="100sp";
     layout_height="fill";
+    layout_width="100sp";
     {
         EditText;
-        id="adder1";
-        layout_width="wrap_content";
         text="20";
+        id="adder1";
+        layout_width="100sp";
         };
     {
         TextView;
-        id="运算符";
         textSize="30";
+        id="运算符";
         text="+";
         };
     {
         EditText;
-        id="adder2";
         textSize="20";
-        layout_width="wrap_content";
+        id="adder2";
         text="10";
+        layout_width="100sp";
         };
     {
         TextView;
@@ -29,50 +29,50 @@
         };
     {
         TextView;
-        id="result";
         textSize="24";
-        layout_width="wrap";
+        id="result";
         text="?";
+        layout_width="wrap";
         };
     {
         Button;
-        id="calc";
         text="计算";
+        id="calc";
         };
     {
         Button;
-        layout_marginLeft="300";
-        id="config";
-        layout_marginTop="-144";
         text="切换模式";
+        layout_marginLeft="300";
+        layout_marginTop="-144";
+        id="config";
         };
     {
         Switch;
         text="Error Catching:";
         layout_marginTop="10";
-        textSize="24";
         id="error_catch";
+        textSize="21";
         };
     {
         Button;
+        text="设置程序标题";
         id="test";
         layout_marginTop="10";
         layout_width="wrap_content";
-        text="设置程序标题";
         };
     {
         ScrollView;
-        layout_width="fill";
         layout_height="fill";
+        layout_width="fill";
         {
             TextView;
+            textSize="16";
             layout_width="fill";
-            id="printer";
-            textSize="18";
             text=[==[欢迎打开鲲的计算！
-本计算器每次退出均会完全重置喔！]==];
+            本计算器每次退出均会完全重置喔！]==];
+            id="printer";
             layout_height="fill";
             textColor="#4a4a98";
+            };
         };
     };
-};
