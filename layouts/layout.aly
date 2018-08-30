@@ -6,7 +6,7 @@
     {
         EditText;
         id="adder1";
-        layout_width="100sp";
+        layout_width="wrap_content";
         text="20";
         };
     {
@@ -19,7 +19,7 @@
         EditText;
         id="adder2";
         textSize="20";
-        layout_width="100sp";
+        layout_width="wrap_content";
         text="10";
         };
     {
