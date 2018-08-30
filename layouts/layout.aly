@@ -1,77 +1,79 @@
 {
     LinearLayout;
-    orientation="vertical";
     layout_height="fill";
+    orientation="vertical";
     layout_width="100sp";
     {
         EditText;
         text="20";
+        layout_width="wrap_content";
         id="adder1";
-        layout_width="100sp";
+        singleLine="true";
         };
     {
         TextView;
+        text="+";
         textSize="30";
         id="运算符";
-        text="+";
         };
     {
         EditText;
         textSize="20";
         id="adder2";
+        layout_width="wrap_content";
         text="10";
-        layout_width="100sp";
+        singleLine="true";
         };
     {
         TextView;
-        textSize="30";
         text="=";
+        textSize="30";
         };
     {
         TextView;
+        text="?";
         textSize="24";
         id="result";
-        text="?";
         layout_width="wrap";
         };
     {
         Button;
-        text="计算";
         id="calc";
+        text="计算";
         };
     {
         Button;
         text="切换模式";
-        layout_marginLeft="300";
         layout_marginTop="-144";
         id="config";
+        layout_marginLeft="300";
         };
     {
         Switch;
         text="Error Catching:";
-        layout_marginTop="10";
-        id="error_catch";
         textSize="21";
+        id="error_catch";
+        layout_marginTop="10";
         };
     {
         Button;
         text="设置程序标题";
-        id="test";
         layout_marginTop="10";
+        id="test";
         layout_width="wrap_content";
         };
     {
         ScrollView;
-        layout_height="fill";
         layout_width="fill";
+        layout_height="fill";
         {
             TextView;
+            layout_height="fill";
             textSize="16";
-            layout_width="fill";
+            id="printer";
             text=[==[欢迎打开鲲的计算！
             本计算器每次退出均会完全重置喔！]==];
-            id="printer";
-            layout_height="fill";
+            layout_width="fill";
             textColor="#4a4a98";
             };
         };
