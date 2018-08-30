@@ -28,26 +28,26 @@ theEnd = 0
 function printMsgAdvanced(textToPrint, changeColor, changeSize)
 	-- the text are put before everything else.
 	printer.text = textToPrint.."\n\n"..printer.text
-	printer.textColor = changeColor
-	printer.textSize = changeSize
+    pcall(loadstring("printer.setTextColor(0xff"..string.sub(changeColor,2,7)..")"))
+	printer.setTextSize(tonumber(changeSize))
 end
 
 function printMsgNormal(textToPrint)
 	printer.text = textToPrint.."\n\n"..printer.text
-	printer.textColor = "#4a4a98"
-	printer.textSize = "18"
+    printer.setTextColor(0x4a4a8900)
+	printer.setTextSize(16)
 end
 
 function printMsgAchievement(textToPrint)
 	printer.text = textToPrint.."\n\n"..printer.text
-	printer.textColor = "#d89a4b"
-	printer.textSize = "18"
+	printer.setTextColor(0xd89a4b00)
+	printer.setTextSize(16)
 end
 
 function printMsgError(textToPrint)
 	printer.text = textToPrint.."\n\n"..printer.text
-	printer.textColor = "#ff0000"
-	printer.textSize = "18"
+	printer.setTextColor(0xf3b5a400)
+	printer.setTextSize(16)
 end
 calc.onClick=function(calculate)
 	--the main part,because this is really a calculator
@@ -351,7 +351,7 @@ test.onClick=function(test)
 		--Thens
 		--4
 		if cancelling > -1 and cancelling < 5 then
-			printMsgAdvanced("哇！居然点了取消！真没想到啊！那……把程序名字设定为鲲的英语名试试"..string.rep("? ",cancelling),"#db5b6a","23")
+			printMsgAdvanced("哇！居然点了取消！真没想到啊！那……把程序名字设定为鲲的英语名试试"..string.rep("? ",cancelling),"#db5b6a","16")
 		end
 		if cancelling == 5 then
 			found = found + 1
